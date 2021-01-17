@@ -50,12 +50,13 @@ export default {
             alert("Click!");
         },
         formatData() {
-            this.producteurs.forEach(producteur => {
+            this.producteurs.forEach(_producteur => {
+                console.log(_producteur)
                 let array = []
-                array['adresse'] = producteur.adresse
-                array['nom'] = producteur.name
-                array['latLng'] = latLng(producteur.lat, producteur.lng)
-                array['id'] = producteur.id
+                array['adresse'] = _producteur.adresse
+                array['nom'] = _producteur.name
+                array['latLng'] = latLng(_producteur.lat, _producteur.lng)
+                array['id'] = _producteur.id
                 this.listProducteurs.push(array)
             })
         },

@@ -2,37 +2,51 @@
   <v-navigation-drawer
     id="core-navigation-drawer"
     v-model="drawer"
-    :dark="barColor !== 'rgba(228, 226, 226, 1), rgba(255, 255, 255, 0.7)'"
     :expand-on-hover="expandOnHover"
     mobile-breakpoint="960"
     app
     width="260"
     v-bind="$attrs"
   >
-    <v-toolbar-title class="hidden-sm-and-down font-weight-light text-center mt-5 white--text">
-      <v-icon color="success">mdi-alpha-d-box</v-icon>MielPays
+    <v-toolbar-title
+      class="hidden-sm-and-down font-weight-light text-center mt-5"
+    >
+      MielPays
     </v-toolbar-title>
     <v-divider class="mb-1" />
 
     <v-list>
       <v-list-item>
-        <v-btn v-if="isChecked" block to="/users" text class="text-decoration-none" color="success">
-          <v-icon class="white--text mr-auto">mdi-view-dashboard</v-icon>Utilisateurs
+        <v-btn
+          v-if="isChecked"
+          block
+          to="/"
+          text
+          class="text-decoration-none"
+          color="success"
+        >
+          <v-icon class="mr-auto">mdi-view-dashboard</v-icon>Accueil
         </v-btn>
       </v-list-item>
       <v-list-item>
-        <v-btn v-if="isChecked" text block color="success">
-          <v-icon class="white--text mr-auto">mdi-card-plus-outline</v-icon>Page 1
+        <v-btn v-if="isChecked" text block color="success" to="/boutique">
+          <v-icon class="mr-auto">mdi-card-plus-outline</v-icon>Boutique
         </v-btn>
       </v-list-item>
-      <v-list-item>
-        <v-btn v-if="isChecked" text block color="success">
-          <v-icon class="white--text mr-auto">mdi-card-plus-outline</v-icon>Page2
+      <v-list-item v-if="isChecked && isAdmin">
+        <v-btn v-if="isChecked" text block color="success" to="/users">
+          <v-icon class="mr-auto">mdi-card-plus-outline</v-icon>Utilisateurs
         </v-btn>
       </v-list-item>
-      <v-list-item>
-        <v-btn v-if="isChecked" text block color="success">
-          <v-icon class="white--text mr-auto">mdi-card-plus-outline</v-icon>Page3
+      <v-list-item v-if="isChecked && isProducteur">
+        <v-btn
+          v-if="isChecked"
+          text
+          block
+          color="success"
+          :to="'/producteur/' + currentUser.id + '/dashboard'"
+        >
+          <v-icon class="mr-auto">mdi-card-plus-outline</v-icon>Dashboard
         </v-btn>
       </v-list-item>
     </v-list>
@@ -76,6 +90,17 @@ export default {
     },
     isChecked() {
       return this.currentUser;
+    },
+    isProducteur() {
+      return this.currentUser.id_role.id === 3;
+    },
+    isAdmin() {
+      return this.currentUser.id_role.id === 1;
+    },
+  },
+  methods: {
+    dashboard() {
+      window.CanvasRenderingContext2D;
     },
   },
 };

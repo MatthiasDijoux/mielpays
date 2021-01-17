@@ -6,6 +6,7 @@ use App\AdresseModel;
 use App\Http\Resources\OrderResource;
 use App\Mail\Contact;
 use App\OrderModel;
+use App\PopularProducts;
 use App\ProductModel;
 use App\StatusModel;
 use App\User;

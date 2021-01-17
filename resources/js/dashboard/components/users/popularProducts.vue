@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <v-col v-for="product in products" :key="product.id" col="5" sm="5" md="5">
+  <v-row>
+    <v-col v-for="product in products" :key="product.id" col="5" sm="3" md="3">
       <v-card max-width="700">
         <template slot="progress">
           <v-progress-linear
@@ -20,6 +20,6 @@
         <v-card-text> Stock: {{ product.quantite_acheté }} </v-card-text>
       </v-card>
     </v-col>
-  </div>
+  </v-row>
 </template>
 <script src="./popularProducts.js"/>

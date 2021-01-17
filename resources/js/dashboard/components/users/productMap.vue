@@ -13,7 +13,7 @@
         :key="producteur.id"
         :lat-lng="producteur.latLng"
       >
-        <l-popup> </l-popup>
+        <l-popup> {{ producteur.nom }},{{ producteur.adresse }} </l-popup>
       </l-marker>
     </l-map>
   </div>
