@@ -1,16 +1,10 @@
 
 
-## À propos Distropic
+## À propos MielPays
 
-Distropic est un boilerplate mettant en place une architecture couplant le framework Laravel au framework Vuejs avec un système d'authentification.
+MielPays est un marketplace destiné à la vente de miel à la Réunion.
 
-## Processus de mise en marche 
-
-Pour mettre en place le projet, vous devez disposer sur votre appareil de Docker qui permet la containerisation des outils tel que nodes, nginx, apache ou encore mysql.
-
-## Installation de Distropic
-
-Pour installer correctement distropic il vous faut entrer les lignes de commandes suivant dans le terminal du projet :
+## Mise en place de l'app
 
 * docker-compose build
 * docker-compose up
@@ -32,7 +26,5 @@ Parametrer votre connexion mysql ainsi sur workbench :
 * Port: 8306
 * Username: root
 * Password: root
-
-Felicitation !! Vous avez accès au boilerplate :).
 
 Votre site en local : http://distropic.localhost:8001/
