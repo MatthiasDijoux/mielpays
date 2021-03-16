@@ -41,7 +41,6 @@ export default {
                 response.data.data.forEach(product => {
                     this.popularProducts.push(product)
                 })
-                console.log(this.popularProducts)
             })
         }
     },

@@ -51,7 +51,6 @@ export default {
         },
         formatData() {
             this.producteurs.forEach(_producteur => {
-                console.log(_producteur)
                 let array = []
                 array['adresse'] = _producteur.adresse
                 array['nom'] = _producteur.name

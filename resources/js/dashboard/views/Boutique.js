@@ -1,6 +1,10 @@
 import Axios from "axios";
+import updateQuantity from "../components/users/updateQuantity.vue"
 import { basketService } from '../_services/basketService.js';
 export default {
+    components: {
+        updateQuantity,
+    },
     data() {
         return {
             products: [],
@@ -22,8 +26,5 @@ export default {
             basketService.add(product, this.quantity);
             this.quantity = 0;
         },
-        updateQuantity(product) {
-            basketService.replaceQuantity(product)
-        }
     }
 }

@@ -31,7 +31,6 @@ export default {
 
     methods: {
         getProducts() {
-            console.log(this.id)
             clientService.get('/api/producteur/' + this.$route.params.id).then(response => {
                 response.data.data.forEach(product => {
                     this.products.push(product);

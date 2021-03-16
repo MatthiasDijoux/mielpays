@@ -79,7 +79,6 @@ export default {
                 const responseData = facture.data;
                 this.downloadPDF(responseData);
             } catch (error) {
-                console.log(error)
             }
         },
 

@@ -76,7 +76,6 @@ function replaceQuantity(product) {
     else {
         throw 'Err'
     }
-    console.log(basket)
     storeBasket(basket)
 }
 function sendOrder(order) {

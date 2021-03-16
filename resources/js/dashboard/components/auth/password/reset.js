@@ -15,7 +15,6 @@ export default {
       this.loading = true;
       authenticationService.passwordReset(this.user).then(
         (user) => {
-            console.log(user);
         //   if (user == undefined) {
         //     this.erreur = "mot de passe ou email incorrect";
         //   } else {
